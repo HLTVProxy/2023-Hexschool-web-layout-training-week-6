@@ -1,3 +1,522 @@
-.index-title {
-  font-size: 100px;
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 518px;
+  margin-top: 32px;
+  background-image: url("/assets/images/event/13.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .event-time {
+    display: block;
+    padding: 48px;
+    color: #fff;
+    font: {
+      family: "Yeseva One", "cursive", sans-serif;
+      size: 60px;
+      weight: 400;
+    }
+  }
+  .banner-event-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 24px;
+    h2 {
+      font: {
+        family: "Noto Serif TC", "serif", sans-serif;
+        size: 24px;
+        weight: 700;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.row.event-category-list {
+  margin-top: 48px;
+  .event-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    border: 2px solid #000;
+    &:not(:last-of-type) {
+      border-right: none;
+    }
+    img {
+      width: 80px;
+    }
+    p {
+      margin-top: 12px;
+      color: $primary;
+      font: {
+        size: 24px;
+        weight: 700;
+        family: "Noto Serif TC", "serif", sans-serif;
+      }
+    }
+  }
+  .explore-more-category {
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    p {
+      margin-top: 0;
+      font-size: 48px;
+      color: $secondary;
+    }
+  }
+}
+
+.recent-activities {
+  margin-top: 48px;
+  .recent-activities-content-block {
+    margin-top: 32px;
+  }
+  .recent-event-time {
+    color: $primary;
+    border-bottom: 3px solid $primary;
+    margin-bottom: 12px;
+    font: {
+      family: "Yeseva One", "cursive", sans-serif;
+      size: 48px;
+      weight: 400;
+    }
+  }
+  .card-img-top {
+    height: 255px;
+    object-fit: cover;
+  }
+  .event-title {
+    color: $primary;
+    margin-top: 12px;
+    font: {
+      size: 24px;
+      weight: 700;
+      family: "Noto Serif TC", "serif", sans-serif;
+    }
+  }
+  .event-desc {
+    color: $primary;
+    margin-top: 12px;
+    margin-bottom: 0;
+    height: 72px;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font: {
+      size: 16px;
+      weight: 400;
+      family: "Noto Serif TC", "serif", sans-serif;
+    }
+  }
+  .event-category-and-link-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 2px solid $primary;
+    .event-category {
+      display: flex;
+      display: flex;
+      align-items: center;
+      a {
+        color: #000;
+        font: {
+          size: 16px;
+          weight: 700;
+          family: "Noto Serif TC", "serif", sans-serif;
+        }
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        width: 24px;
+        margin-right: 4px;
+      }
+    }
+    .event-link {
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #000;
+      font: {
+        size: 16px;
+        weight: 700;
+        family: "Noto Sans TC", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-size: 16px;
+      }
+    }
+    .event-link::before {
+      content: "";
+      transition: all 0.3 ease-in-out;
+    }
+    .event-link:hover::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -8px;
+      transform: translateY(-50%);
+      z-index: -1;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $secondary;
+    }
+  }
+}
+
+.online-event {
+  margin-top: 60px;
+  .online-event-content-block {
+    margin-top: 32px;
+    .online-event-image {
+      width: 100%;
+      height: 317px;
+      background-image: url("/assets/images/event/online.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  h4 {
+    color: #000;
+    margin-bottom: 16px;
+    font: {
+      family: "Noto Serif TC", "serif", sans-serif;
+      size: 32px;
+      weight: 700;
+    }
+  }
+  .event-tags {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    a {
+      display: block;
+      padding: 4px 24px;
+      border: 1px solid #000;
+      border-left-width: 4px;
+      &:not(:first-of-type) {
+        margin-left: 8px;
+      }
+      font: {
+        family: "Noto Serif TC", "serif", sans-serif;
+        size: 16px;
+        weight: 700;
+      }
+    }
+  }
+  p {
+    color: #000;
+    font: {
+      size: 16px;
+      weight: 400;
+      family: "Noto Sans TC", sans-serif;
+    }
+  }
+  .event-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    background-color: $primary;
+    color: #fff;
+    span {
+      font-size: 16px;
+      margin-left: 4px;
+    }
+    &:hover {
+      color: $secondary;
+    }
+    font: {
+      size: 20px;
+      weight: 700;
+      family: "Noto Sans TC", sans-serif;
+    }
+  }
+}
+
+.activity-albums-banner {
+  padding: 16px 0;
+  background-color: $primary;
+  color: $secondary;
+  margin-top: 60px;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
+  font: {
+    family: "Noto Serif TC", "serif", sans-serif;
+    size: 32px;
+    weight: 700;
+  }
+}
+
+.activity-albums {
+  margin-top: 60px;
+  .activity-album {
+    position: relative;
+    padding: 16px;
+    border: 2px solid $primary;
+    span {
+      position: absolute;
+      top: -24px;
+      left: 50%;
+      padding: 10px 16px;
+      background-color: #fff;
+      transform: translateX(-50%) rotate(-4deg);
+      font: {
+        family: "Noto Serif TC", "serif", sans-serif;
+        size: 16px;
+        weight: 700;
+      }
+    }
+    img {
+      width: 100%;
+      height: 274px;
+      object-fit: cover;
+    }
+    h5 {
+      margin: 16px 0 32px;
+      font: {
+        family: "Noto Serif TC", "serif", sans-serif;
+        size: 18px;
+        weight: 700;
+      }
+    }
+  }
+  .col-12:nth-of-type(2) .activity-album,
+  .col-12:nth-of-type(4) .activity-album {
+    transform: rotate(2deg);
+  }
+  .col-12:nth-of-type(3) .activity-album {
+    transform: rotate(-2deg);
+  }
+}
+
+.follow-and-subscribe-block {
+  margin: 60px 0;
+  .follow-block,
+  .subscribe-block {
+    border: 2px solid #000;
+    h6 {
+      margin: 0;
+      padding: 16px 32px;
+      color: $primary;
+      font: {
+        family: "Noto Serif TC", "serif", sans-serif;
+        size: 32px;
+        weight: 700;
+      }
+    }
+    hr {
+      margin: 0;
+      color: #000;
+      border-width: 2px;
+      opacity: 1;
+    }
+    p {
+      padding: 32px;
+      margin: 0;
+      font: {
+        size: 16px;
+        weight: 400;
+        family: "Noto Sans TC", sans-serif;
+      }
+    }
+  }
+  .follow-block {
+    border-right: none;
+    .follow-list {
+      padding: 32px;
+      padding-top: 0;
+      margin: 0;
+      li {
+        display: flex;
+        align-items: center;
+        &:not(:first-of-type) {
+          margin-top: 16px;
+        }
+      }
+      .icofont-ui-email,
+      .icofont-phone,
+      .icofont-facebook {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        background-color: $primary;
+        color: #fff;
+        &::before {
+          font-size: 24px;
+        }
+      }
+      a {
+        color: #000;
+        margin-left: 16px;
+        font: {
+          size: 16px;
+          weight: 400;
+          family: "Noto Sans TC", sans-serif;
+        }
+      }
+    }
+  }
+  .subscribe-block {
+    .email-subscribe-block {
+      padding: 32px;
+      padding-top: 0;
+    }
+    .email-subscribe-btn {
+      display: block;
+      width: 100%;
+      margin-top: 52px;
+    }
+  }
+}
+
+.quote-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  border-top: 3px solid $primary;
+  border-bottom: 3px solid $primary;
+  .quote {
+    margin: 0;
+    font: {
+      family: "Noto Serif TC", "serif", sans-serif;
+      size: 32px;
+      weight: 700;
+    }
+  }
+  .quote-author {
+    margin: 0;
+    margin-top: 16px;
+    font: {
+      family: "Noto Serif TC", "serif", sans-serif;
+      size: 18px;
+      weight: 700;
+    }
+  }
+}
+
+@include mobile {
+  .banner {
+    margin-top: 16px;
+    height: 350px;
+    .event-time {
+      margin-top: 16px;
+      margin-left: 40px;
+      padding: 0;
+      font-size: 32px;
+    }
+    .banner-event-block {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+  .row.event-category-list {
+    .event-category {
+      img {
+        width: 40px;
+      }
+    }
+    .explore-more-category {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+  .recent-event-time {
+    font-size: 32px;
+  }
+  .card-img-top {
+    height: 210px;
+  }
+  .event-title {
+    font-size: 18px;
+  }
+  .online-event {
+    .online-event-image {
+      height: 158px;
+    }
+    h4 {
+      font-size: 18px;
+      margin-top: 12px;
+    }
+    .event-tags {
+      a {
+        font-size: 14px;
+      }
+    }
+    .event-link {
+      font-size: 16px;
+    }
+  }
+  .activity-albums-banner {
+    font-size: 16px;
+  }
+  .activity-albums {
+    .col-12:not(:first-of-type) {
+      margin-top: 44px;
+    }
+  }
+  .follow-and-subscribe-block {
+    .follow-block,
+    .subscribe-block {
+      border: 2px solid #000;
+      h6 {
+        padding: 16px 12px;
+        font-size: 24px;
+      }
+      p {
+        padding: 16px 12px;
+      }
+    }
+    .follow-block {
+      .follow-list {
+        padding: 16px 12px;
+        padding-top: 0;
+      }
+    }
+    .subscribe-block {
+      margin-top: 24px;
+      .email-subscribe-block {
+        padding: 0 12px;
+      }
+      .email-subscribe-btn {
+        margin-top: 16px;
+      }
+    }
+  }
+  .quote-block {
+    padding: 48px 0;
+    .quote {
+      font-size: 18px;
+    }
+    .quote-author {
+      font-size: 14px;
+    }
+  }
 }

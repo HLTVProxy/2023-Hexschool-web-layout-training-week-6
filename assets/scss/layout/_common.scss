@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+@mixin mobile {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.page-title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid $primary;
+  padding: 24px 32px;
+  span {
+    color: $primary;
+    font: {
+      family: "Yeseva One", "cursive", sans-serif;
+      size: 64px;
+      weight: 400;
+    }
+  }
+  h2, h3 {
+    color: $primary;
+    font: {
+      family: "Noto Serif TC", "serif", sans-serif;
+      size: 32px;
+      weight: 700;
+    }
+  }
+  @include mobile() {
+    span {
+      font-size: 24px;
+    }
+    h2, h3 {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,4 +1,79 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+header {
+  border-bottom: 3px solid $primary;
+}
+
+.navbar-brand img {
+  width: 52px;
+}
+
+.website-name {
+  display: flex;
+  align-items: center;
+  h1 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font: {
+      size: 32px;
+      weight: 400;
+      family: "Yeseva One", "cursive", sans-serif;
+    }
+  }
+  span {
+    margin-left: 4px;
+    font: {
+      size: 16px;
+      weight: 700;
+      family: "Noto Serif TC", "serif", sans-serif;
+    }
+  }
+}
+
+.mobile-search {
+  width: 200px;
+  display: none;
+}
+
+.search {
+  width: 336px;
+  margin-left: 48px;
+  input,
+  button {
+    border-radius: 0;
+  }
+  .search-btn:hover {
+    color: $secondary;
+  }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  li button {
+    color: $primary;
+    font: {
+      size: 18px;
+      weight: 400;
+      family: "Yeseva One", "cursive", sans-serif;
+    }
+  }
+  i::before {
+    margin-right: 4px;
+  }
+}
+
+@include mobile {
+  .navbar .navbar-brand {
+    margin: 0;
+  }
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .website-name, .search {
+    display: none;
+  }
+  .mobile-search {
+    display: block;
+  }
 }

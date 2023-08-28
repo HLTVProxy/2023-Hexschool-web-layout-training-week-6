@@ -1,7 +1,9 @@
 @import "../../node_modules/bootstrap/scss/functions";
+@import "./icofont.scss";
 @import './utils/variables';
 
 
+@import './layout/common.scss';
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
