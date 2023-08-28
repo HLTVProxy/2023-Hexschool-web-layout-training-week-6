@@ -1,0 +1,32 @@
+.events {
+  margin-top: 32px;
+  .event-tags {
+    margin: 32px 0;
+  }
+  .pagination-block {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+		.pagination {
+			margin: 0;
+		}
+    .page-item {
+      margin: 0 4px;
+    }
+  }
+}
+
+@include mobile() {
+  .events {
+    .row.event-list {
+      margin-top: 0px;
+    }
+    .pagination-block {
+      margin-top: 32px;
+      margin-bottom: 48px;
+      .page-item {
+        margin: 0 8px;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 @mixin mobile {
@@ -12,7 +12,13 @@ body {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -34,7 +40,8 @@ li {
       weight: 400;
     }
   }
-  h2, h3 {
+  h2,
+  h3 {
     color: $primary;
     font: {
       family: "Noto Serif TC", "serif", sans-serif;
@@ -46,8 +53,147 @@ li {
     span {
       font-size: 24px;
     }
-    h2, h3 {
+    h2,
+    h3 {
       font-size: 16px;
     }
+  }
+}
+
+.event-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  button {
+    display: block;
+    padding: 4px 24px;
+    border: 1px solid #000;
+    border-left-width: 4px;
+    margin-bottom: 8px;
+    &:hover {
+      background-color: $primary;
+      color: #fff;
+      border-left-color: $secondary;
+    }
+    &:not(:first-of-type) {
+      margin-left: 8px;
+    }
+    font: {
+      family: "Noto Serif TC", "serif", sans-serif;
+      size: 16px;
+      weight: 700;
+    }
+  }
+}
+
+.event-list {
+  margin-top: 32px;
+  .event-time {
+    color: $primary;
+    border-bottom: 3px solid $primary;
+    margin-bottom: 12px;
+    font: {
+      family: "Yeseva One", "cursive", sans-serif;
+      size: 48px;
+      weight: 400;
+    }
+  }
+  .card-img-top {
+    height: 255px;
+    object-fit: cover;
+  }
+  .event-title {
+    color: $primary;
+    margin-top: 12px;
+    font: {
+      size: 24px;
+      weight: 700;
+      family: "Noto Serif TC", "serif", sans-serif;
+    }
+  }
+  .event-desc {
+    color: $primary;
+    margin-top: 12px;
+    margin-bottom: 0;
+    height: 72px;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font: {
+      size: 16px;
+      weight: 400;
+      family: "Noto Serif TC", "serif", sans-serif;
+    }
+  }
+  .event-category-and-link-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 2px solid $primary;
+    .event-category {
+      display: flex;
+      display: flex;
+      align-items: center;
+      a {
+        color: #000;
+        font: {
+          size: 16px;
+          weight: 700;
+          family: "Noto Serif TC", "serif", sans-serif;
+        }
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        width: 24px;
+        margin-right: 4px;
+      }
+    }
+    .event-link {
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #000;
+      font: {
+        size: 16px;
+        weight: 700;
+        family: "Noto Sans TC", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-size: 16px;
+      }
+    }
+    .event-link::before {
+      content: "";
+      transition: all 0.3 ease-in-out;
+    }
+    .event-link:hover::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -8px;
+      transform: translateY(-50%);
+      z-index: -1;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $secondary;
+    }
+  }
+}
+
+@include mobile() {
+  .event-time {
+    font-size: 32px;
+  }
+  .card-img-top {
+    height: 210px;
+  }
+  .event-title {
+    font-size: 18px;
   }
 }
